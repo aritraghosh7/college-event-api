@@ -6,6 +6,7 @@ A simple REST API to manage college events, built with **Node.js**, **Express**,
 
 ## 🧰 Tech Stack
 
+- **Backend**: html + css + js
 - **Backend**: Node.js + Express
 - **Database**: MongoDB (via Mongoose)
 - **Testing**: Postman / curl
