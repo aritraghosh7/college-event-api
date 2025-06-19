@@ -1,48 +1,59 @@
-📘 College Event Management API
-A simple REST API to manage college events, built with Node.js, Express, and MongoDB.
+# 📘 College Event Management API
 
-📦 Tech Stack
-Backend: Node.js + Express
+A simple REST API to manage college events, built with **Node.js**, **Express**, and **MongoDB**.
 
-Database: MongoDB (Mongoose)
+---
 
-Testing: Postman / curl
+## 🧰 Tech Stack
 
-📁 Folder Structure
-vbnet
-Copy
-Edit
+- **Backend**: Node.js + Express
+- **Database**: MongoDB (via Mongoose)
+- **Testing**: Postman / curl
+
+---
+
+## 📁 Folder Structure
+
 college-event-api/
 ├── controllers/
-│   └── eventController.js
+│ └── eventController.js
 ├── models/
-│   └── Event.js
+│ └── Event.js
 ├── routes/
-│   └── eventRoutes.js
+│ └── eventRoutes.js
 ├── server.js
 ├── .env
 ├── .gitignore
 ├── package.json
 └── README.md
-🚀 Setup Instructions
-1. Clone the Repo
-bash
+
+yaml
 Copy
 Edit
-git clone https://github.com/your-username/college-event-api.git
-cd college-event-api
-2. Install Dependencies
+
+---
+
+## 🚀 Setup Instructions
+
+1. **Clone the Repo**
+   ```bash
+   git clone https://github.com/your-username/college-event-api.git
+   cd college-event-api
+Install Dependencies
+
 bash
 Copy
 Edit
 npm install
-3. Create .env File
+Create .env File
+
 ini
 Copy
 Edit
-MONGODB_URI=your_mongodb_uri
+MONGODB_URI=your_mongodb_connection_string
 PORT=3000
-4. Run the Server
+Run the Server
+
 bash
 Copy
 Edit
@@ -51,13 +62,11 @@ npm run dev
 Method	Endpoint	Description
 GET	/api/events	Get all events
 POST	/api/events	Create a new event
-GET	/api/events/:id	Get single event
+GET	/api/events/:id	Get a single event
 PUT	/api/events/:id	Update an event
 DELETE	/api/events/:id	Delete an event
 
-📥 Sample POST Request
-POST /api/events
-
+🧪 Sample POST Body (JSON)
 json
 Copy
 Edit
