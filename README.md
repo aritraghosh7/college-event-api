@@ -1,17 +1,27 @@
-# 📘 College Event Management API
+# 📘 College Event Management App
 
-A simple REST API to manage college events, built with **Node.js**, **Express**, and **MongoDB**.
+A simple full-stack web application to manage college events. Built with **Node.js**, **Express**, and **MongoDB** for the backend, and a clean **HTML/CSS/JS frontend** that interacts with the REST API.
+
+---
+
+## 📦 Tech Stack
+
+- **Backend:** Node.js + Express  
+- **Database:** MongoDB (via Mongoose)  
+- **Frontend:** HTML, CSS, JavaScript  
+- **Testing:** Postman, curl
 
 ---
 
-## 🧰 Tech Stack
+## 🖥️ Frontend
 
-- **Backend**: html + css + js
-- **Backend**: Node.js + Express
-- **Database**: MongoDB (via Mongoose)
-- **Testing**: Postman / curl
+- Located in the `/frontend` folder  
+- Interacts with API using `fetch()`  
+- Lets users create and view events in the browser  
+- Automatically displays the event list after submission
 
 ---
+
 
 ## 📁 Folder Structure
 
