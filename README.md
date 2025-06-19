@@ -41,10 +41,12 @@ A simple REST API to manage college events, built with **Node.js**, **Express**,
 ```bash
 git clone https://github.com/your-username/college-event-api.git
 cd college-event-api
-### 2. Install Dependencies
-```bash
+2. Install Dependencies
+bash
+Copy
+Edit
 npm install
-### 3. Create a .env File
+3. Create a .env File
 Create a file named .env in the root folder and add:
 
 env
@@ -57,22 +59,6 @@ bash
 Copy
 Edit
 npm run dev
-🔌 API Endpoints
-Method	Endpoint	Description
-GET	/api/events	Get all events
-POST	/api/events	Create a new event
-GET	/api/events/:id	Get a single event
-PUT	/api/events/:id	Update an event
-DELETE	/api/events/:id	Delete an event
-
-🧪 Sample POST Body (JSON)
-json
+yaml
 Copy
 Edit
-{
-  "title": "Tech Talk",
-  "description": "A seminar on AI",
-  "date": "2025-06-30",
-  "location": "Auditorium",
-  "organizer": "CSI Club"
-}
