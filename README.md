@@ -71,6 +71,19 @@ npm run dev
 ```
 Server will start at `http://localhost:3000`.
 
+---
+
+
+### 🌐 Using the App
+
+After running the server, open your browser and visit:
+```
+http://localhost:3000
+```
+You’ll see a form to add events and a live list of existing events below it.
+
+---
+
 
 ## 🔌 API Endpoints
 
