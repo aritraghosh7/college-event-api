@@ -14,22 +14,7 @@ A simple REST API to manage college events, built with **Node.js**, **Express**,
 
 ## 📁 Folder Structure
 
-college-event-api/
-├── controllers/
-│ └── eventController.js
-├── models/
-│ └── Event.js
-├── routes/
-│ └── eventRoutes.js
-├── server.js
-├── .env
-├── .gitignore
-├── package.json
-└── README.md
-
-yaml
-Copy
-Edit
+<pre> college-event-api/ ├── controllers/ │ └── eventController.js ├── models/ │ └── Event.js ├── routes/ │ └── eventRoutes.js ├── server.js ├── .env ├── .gitignore ├── package.json └── README.md </pre>
 
 ---
 
