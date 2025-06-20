@@ -25,22 +25,26 @@ A simple full-stack web application to manage college events. Built with **Node.
 
 ## 📁 Folder Structure
 
-<pre> college-event-api/
-│
+<pre> COLLEGE-EVENT-API/
+├── .history/
 ├── controllers/
-│   └── eventController.js
-│
+│ └── eventController.js
+├── frontend/
+│ ├── index.html
+│ ├── script.js
+│ └── style.css
 ├── models/
-│   └── Event.js
-│
+│ └── Event.js
+├── node_modules/
 ├── routes/
-│   └── eventRoutes.js
-│
-├── server.js
+│ └── eventRoutes.js
 ├── .env
 ├── .gitignore
+├── package-lock.json
 ├── package.json
-└── README.md
+├── README.md
+└── server.js
+
  </pre>
 
 ---
