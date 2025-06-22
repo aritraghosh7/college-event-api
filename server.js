@@ -24,12 +24,17 @@ app.get(/^\/(?!api).*/, (req, res) => {
   res.sendFile(path.resolve(__dirname, "frontend", "index.html"));
 });
 
-// Connect to MongoDB and Start Server
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => {
-    console.log("Connected to MongoDB");
-    app.listen(process.env.PORT || 3000, () => {
-      console.log(`Server running on port ${process.env.PORT || 3000}`);
-    });
-  })
-  .catch(err => console.error("MongoDB connection error:", err));
+// Export app for testing
+module.exports = app;
+
+// Start server and connect to MongoDB (only if not testing)
+if (process.env.NODE_ENV !== "test") {
+  mongoose.connect(process.env.MONGODB_URI)
+    .then(() => {
+      console.log("Connected to MongoDB");
+      app.listen(process.env.PORT || 3000, () => {
+        console.log(`Server running on port ${process.env.PORT || 3000}`);
+      });
+    })
+    .catch(err => console.error("MongoDB connection error:", err));
+}
