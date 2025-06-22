@@ -120,7 +120,7 @@ Use the following JSON structure to create a new event:
   "location": "Auditorium",
   "organizer": "CSI Club"
 }
-
+```
 ## 🧪 How to Run Tests
 
 ```bash
