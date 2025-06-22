@@ -25,25 +25,29 @@ A simple full-stack web application to manage college events. Built with **Node.
 
 ## 📁 Folder Structure
 
-<pre> COLLEGE-EVENT-API/
-├── .history/
+<pre> college-event-api/
 ├── controllers/
 │ └── eventController.js
-├── frontend/
-│ ├── index.html
-│ ├── script.js
-│ └── style.css
 ├── models/
 │ └── Event.js
-├── node_modules/
 ├── routes/
 │ └── eventRoutes.js
+├── frontend/
+│ ├── index.html
+│ ├── style.css
+│ └── script.js
+├── tests/
+│ ├── unit/
+│ │ └── eventController.test.js
+│ ├── integration/
+│ │ └── eventRoutes.test.js
+│ └── api/
+│ └── apiEndpoints.test.js
+├── server.js
 ├── .env
 ├── .gitignore
-├── package-lock.json
 ├── package.json
-├── README.md
-└── server.js
+└── README.md
 
  </pre>
 
@@ -116,3 +120,16 @@ Use the following JSON structure to create a new event:
   "location": "Auditorium",
   "organizer": "CSI Club"
 }
+
+## 🧪 How to Run Tests
+
+```bash
+npm test
+```
+### ✅ Test Coverage Report
+Includes unit, integration, and API level tests
+
+Achieved: ~60–80% overall coverage (adjust based on actual output)
+
+#### Tools used: Jest, Supertest, mongodb-memory-server
+
