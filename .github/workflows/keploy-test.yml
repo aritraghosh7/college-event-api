@@ -1,0 +1,48 @@
+name: Keploy API Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  keploy-test:
+    runs-on: ubuntu-latest
+
+    services:
+      mongo:
+        image: mongo
+        ports:
+          - 27017:27017
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Build Docker image
+        run: docker build -t college-event-api .
+
+      - name: Run Keploy test
+        run: |
+          docker network create keploy-network || true
+
+          docker run -d \
+            --name keploy-api \
+            --network keploy-network \
+            -p 3000:3000 \
+            college-event-api
+
+          docker run --rm \
+            --name keploy-test-runner \
+            --network keploy-network \
+            -v ${{ github.workspace }}/keploy:/app/keploy \
+            ghcr.io/keploy/keploy:v2.6.14 \
+            test --path /app/keploy \
+                 --delay 10 \
+                 --command "node server.js" \
+                 --container-name keploy-api \
+                 --cmd-type docker
