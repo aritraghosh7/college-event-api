@@ -36,20 +36,26 @@ A simple full-stack web application to manage college events. Built with **Node.
 │ ├── index.html
 │ ├── style.css
 │ └── script.js
+├── keploy/
+│ └── test-sets/                
 ├── tests/
 │ ├── unit/
 │ │ └── eventController.test.js
 │ ├── integration/
 │ │ └── eventRoutes.test.js
 │ └── api/
-│ └── apiEndpoints.test.js
+│   └── apiEndpoints.test.js
+├── openapi.yaml                
+├── .github/
+│ └── workflows/
+│     └── keploy-test.yml       
 ├── server.js
+├── Dockerfile
 ├── .env
 ├── .gitignore
 ├── package.json
 └── README.md
-
- </pre>
+</pre>
 
 ---
 
