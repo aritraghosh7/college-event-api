@@ -36,26 +36,20 @@ A simple full-stack web application to manage college events. Built with **Node.
 │ ├── index.html
 │ ├── style.css
 │ └── script.js
-├── keploy/
-│ └── test-sets/                
 ├── tests/
 │ ├── unit/
 │ │ └── eventController.test.js
 │ ├── integration/
 │ │ └── eventRoutes.test.js
 │ └── api/
-│   └── apiEndpoints.test.js
-├── openapi.yaml                
-├── .github/
-│ └── workflows/
-│     └── keploy-test.yml       
+│ └── apiEndpoints.test.js
 ├── server.js
-├── Dockerfile
 ├── .env
 ├── .gitignore
 ├── package.json
 └── README.md
-</pre>
+
+ </pre>
 
 ---
 
@@ -139,3 +133,33 @@ Achieved: ~60–80% overall coverage (adjust based on actual output)
 
 #### Tools used: Jest, Supertest, mongodb-memory-server
 
+# 🚀 Keploy Integration ✅
+
+As part of the **Keploy API Fellowship - Task 4**, this project is now integrated with **Keploy** for auto-generating test cases and OpenAPI schema.
+
+---
+
+## ✅ What's Implemented
+
+| Feature                                | Status  |
+|----------------------------------------|---------|
+| 🐳 Docker-based traffic recording       | ✅ Done |
+| 🧪 Test case generation (`keploy/test-sets`) | ✅ Done |
+| 📘 OpenAPI Schema generation (`openapi.yaml`) | ✅ Done |
+| 🔁 CI workflow with Keploy tests        | ✅ Done |
+| 🛠 GitHub Actions integration (`.github/workflows/keploy-test.yml`) | ✅ Done |
+
+---
+## 🚀 Run Keploy Tests Locally
+
+To run the Keploy tests locally, use the following command:
+
+```bash
+./keploy.exe test --path ./keploy
+
+```
+## 🤖 CI/CD Automation
+
+On every push/PR to `main`, the GitHub Action runs Keploy tests automatically.
+
+Check `.github/workflows/keploy-test.yml` for the config.
