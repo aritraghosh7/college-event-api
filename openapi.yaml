@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+  title: College Event API
+  version: 1.0.0
+  description: API to manage college events
+
+servers:
+  - url: http://localhost:3000/api
+
+paths:
+  /events:
+    get:
+      summary: Get all events
+      responses:
+        '200':
+          description: Successful response
+    post:
+      summary: Create a new event
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+      responses:
+        '201':
+          description: Event created
+
+  /events/{id}:
+    get:
+      summary: Get a single event by ID
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Event found
+    put:
+      summary: Update an event
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+      responses:
+        '200':
+          description: Event updated
+    delete:
+      summary: Delete an event
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Event deleted
+
+components:
+  schemas:
+    Event:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        date:
+          type: string
+          format: date
+        location:
+          type: string
+        organizer:
+          type: string
