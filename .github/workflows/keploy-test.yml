@@ -39,10 +39,9 @@ jobs:
           docker run --rm \
             --name keploy-test-runner \
             --network keploy-network \
-            -v ${{ github.workspace }}/keploy:/app/keploy \
             ghcr.io/keploy/keploy:v2.6.14 \
-            test --path /app/keploy \
-                 --delay 10 \
-                 --command "node server.js" \
-                 --container-name keploy-api \
-                 --cmd-type docker
+            test \
+              --delay 10 \
+              --command "node server.js" \
+              --container-name keploy-api \
+              --cmd-type docker
